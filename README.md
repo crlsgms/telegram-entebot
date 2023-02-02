@@ -4,7 +4,7 @@ Um bot sacripanta pronto pra diversas aventuras com sua turminha
 
 ## Installation
 ```bash
-git clone https://github.com/area31/telegram-bot-xingamentos.git
+git clone https://github.com/crlsgms/telegram-entebot.git
 ```
 
 ## Install deps:
