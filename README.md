@@ -1,6 +1,6 @@
-# Telegram-bot-xingamentos
+# Telegram-bot AI botlabs
 
-Um bot muito zuero pra você que já sabe como funciona um bot do telegram. RTFM!
+Um bot sacripanta pronto pra diversas aventuras com sua turminha
 
 ## Installation
 ```bash
