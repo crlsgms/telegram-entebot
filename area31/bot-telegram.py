@@ -178,7 +178,7 @@ def dolar_message(message):
 def franco_message(message):
     url = 'https://economia.awesomeapi.com.br/all/CHF-BRL'
     r = requests.get(url)
-    dolar_data = r.json()
+    franco_data = r.json()
     valor_franco = franco_data['CHF']['bid']
     bot.send_message(message.chat.id, 'O valor atual do Franco Suíço em reais é R$ ' + valor_franco)
 
