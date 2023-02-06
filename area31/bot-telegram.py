@@ -175,7 +175,7 @@ def dolar_message(message):
     bot.send_message(message.chat.id, 'O valor atual do dólar em reais é R$ ' + valor_dolar)
 
 @bot.message_handler(commands=['franco'])
-def dolar_message(message):
+def franco_message(message):
     url = 'https://economia.awesomeapi.com.br/all/CHF-BRL'
     r = requests.get(url)
     dolar_data = r.json()
@@ -207,6 +207,7 @@ def help_message(message):
     help_text += '/xinga - Envia um xingamento aleatório\n'
     help_text += '/dolar - Exibe a cotação do dolar em reais\n'
     help_text += '/euro - Exibe a cotação do euro em reais\n'
+    help_text += '/franco - Exibe a cotação do franco suiço em reais\n'
     help_text += '/btc - Exibe a cotação do Bitcoin em dolares\n'
     help_text += '/xmr - Exibe a cotação do Monero em dolares\n'
     help_text += '/real - Comando desnecessário pelo óbvio, mas tente executar pra ver...\n'
