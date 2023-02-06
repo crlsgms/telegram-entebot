@@ -86,7 +86,7 @@ def respond(message):
 
     try:
         response = openai.Completion.create(
-            engine="text-davinci-002",
+            engine="text-davinci-003",
             prompt=prompt,
             max_tokens=1024,
             n=1,
@@ -173,6 +173,14 @@ def dolar_message(message):
     dolar_data = r.json()
     valor_dolar = dolar_data['USD']['bid']
     bot.send_message(message.chat.id, 'O valor atual do dólar em reais é R$ ' + valor_dolar)
+
+@bot.message_handler(commands=['franco'])
+def dolar_message(message):
+    url = 'https://economia.awesomeapi.com.br/all/CHF-BRL'
+    r = requests.get(url)
+    dolar_data = r.json()
+    valor_franco = franco_data['CHF']['bid']
+    bot.send_message(message.chat.id, 'O valor atual do Franco Suíço em reais é R$ ' + valor_franco)
 
 @bot.message_handler(commands=['btc'])
 def bitcoin_price(message):
